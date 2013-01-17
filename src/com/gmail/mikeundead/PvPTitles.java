@@ -1,6 +1,9 @@
 package com.gmail.mikeundead;
 
+import java.io.IOException;
 import java.util.logging.Logger;
+
+import com.gmail.mikeundead.mcstats.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class PvPTitles extends JavaPlugin
@@ -26,6 +29,13 @@ public class PvPTitles extends JavaPlugin
 		getCommand("ladder").setExecutor(this.ladder);
 		
 		this.log.info("PvPTitles has been enabled!");
+
+        try {
+            Metrics metrics = new Metrics(this);
+            metrics.start();
+        } catch (IOException e) {
+            this.log.info("MCStats load failed!");
+        }
 	}
 	 
 	public void onDisable()
