@@ -105,76 +105,77 @@ public class HandlePlayerPrefix implements Listener
 	private void calculateFame(String killed, Player player, int fame, int kills)
 	{
 		int a = this.databaseHandler.PlayerFame();
+        String tag = this.databaseHandler.getTag();
 
 		if(kills == 0)
 		{
 			fame++;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 1 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 1 " + tag + ".");
 		}
 		if(kills == 1)
 		{
 			fame = fame + 2;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 2 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 2 " + tag + ".");
 		}
 		if(kills == 2)
 		{
 			fame = fame + 3;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 3 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 3 " + tag + ".");
 		}
 		if(kills == 3)
 		{
 			fame = fame + 4;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 4 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 4 " + tag + ".");
 		}
 		if(kills == 4)
 		{
 			fame = fame + 6;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 6 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 6 " + tag + ".");
 		}
 		if(kills == 5)
 		{
 			fame = fame + 8;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 8 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 8 " + tag + ".");
 		}
 		if(kills == 6)
 		{
 			fame = fame + 12;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 12 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 12 " + tag + ".");
 		}
 		if(kills == 7)
 		{
 			fame = fame + 16;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 16 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 16 " + tag + ".");
 		}
 		if(kills == 8)
 		{
 			fame = fame + 20;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 20 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 20 " + tag + ".");
 		}
 		if(kills == 9)
 		{
 			fame = fame + 24;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 24 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 24 " + tag + ".");
 		}
 		if(kills == 10)
 		{
 			fame = fame + 28;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and recieved 28 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and recieved 28 " + tag + ".");
 		}
 		if(kills == 11)
 		{
 			fame = fame + 32;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 32 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 32 " + tag + ".");
 		}
 		if(kills == 12)
 		{
 			fame = fame + 36;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 36 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 36 " + tag + ".");
 		}
 		if(kills >= 13)
 		{
 			fame = fame + 40;
-			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 40 Fame.");
+			player.sendMessage(ChatColor.GREEN + "You killed " + killed + " and received 40 " + tag + ".");
 		}
 		
 		this.databaseHandler.SavePlayerFame(player.getName(), fame);

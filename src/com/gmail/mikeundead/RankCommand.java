@@ -44,6 +44,7 @@ public class RankCommand implements CommandExecutor
 		int fame = this.databaseHandler.PlayerFame();
 		String rank = this.ranks.GetRank(fame);
 		int rankup = this.ranks.FameToRankUp();
+        String tag = this.databaseHandler.getTag();
 		
 		if(rank == "")
 		{
@@ -54,8 +55,8 @@ public class RankCommand implements CommandExecutor
 			player.sendMessage("Rank: " + rank);
 		}
 		
-		player.sendMessage("Fame: " + fame);
-		
+		player.sendMessage(tag + ": " + fame);
+
 		if(rankup == 999999)
 		{
 			player.sendMessage("You are max ranked.");

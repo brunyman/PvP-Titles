@@ -18,6 +18,7 @@ public class DatabaseHandler
 	private Map<Integer,String> rankList;
 	private Map<Integer, Integer> reqFame;
 	public ChatColor PrefixColor;
+    private String tag;
 		
 	public DatabaseHandler(PvPTitles pvpTitles) 
 	{
@@ -41,6 +42,10 @@ public class DatabaseHandler
 	{
 		return this.reqFame;
 	}
+
+    public String getTag(){
+        return this.tag;
+    }
 	
 	public void SavePlayerFame(String playername, int fame)
 	{
@@ -154,7 +159,8 @@ public class DatabaseHandler
 				60000,
 				100000
 			};
-			
+
+            config.set("Tag", "Fame");
 			config.set("PrefixColor", "green");
 			config.set("RankNames", Arrays.asList(ranks));
 			config.set("ReqFame", Arrays.asList(reqfame));
@@ -192,6 +198,10 @@ public class DatabaseHandler
 		}
 		
 		this.GetPrefixColor(config.getString("PrefixColor"));
+
+        tag = config.getString("Tag");
+
+
 		
 		if(configList.size() != derp.size())
 		{
