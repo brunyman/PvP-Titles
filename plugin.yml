@@ -1,6 +1,6 @@
 name: PvPTitles
 main: com.gmail.mikeundead.PvPTitles
-version: 1.2.9c
+version: 1.2.9d
 softdepend: [Vault]
 commands:
    rank:
